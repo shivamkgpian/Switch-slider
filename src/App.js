@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Switchcase from "./components/djs"
+import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App d-flex flex-column align-items-center justify-content-center w-100">
+      {/* <Container> */}
+      <Routes>
+        <Route path="/" element={<Switchcase />} />
+        {/* <Route path="/create" element={<Invoice />} />
+          <Route path="/create/:id" element={<Invoice />} />
+          <Route path="/edit/:id" element={<Invoice />} /> */}
+      </Routes>
+      {/* </Container> */}
     </div>
   );
 }
